@@ -258,7 +258,7 @@ class main:
 
 		realclass = None
 		uiprint("Program started. Press Ctrl + C to exit")
-		subprocess.call("start https://discord.gg/MyCDzqF54p")
+		subprocess.call('start "" "https://discord.gg/MyCDzqF54p"')
 		
 
 
