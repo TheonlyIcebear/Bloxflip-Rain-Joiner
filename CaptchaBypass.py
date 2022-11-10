@@ -3,6 +3,7 @@ from discord_webhook import DiscordWebhook, DiscordEmbed
 from win10toast import ToastNotifier
 from serpapi import GoogleSearch
 from termcolor import cprint
+from tqdm import tqdm
 from tkinter import *
 from zipfile import *
 from sys import exit
@@ -38,13 +39,17 @@ class Solver:
 
     def keepAlive(self):
         goTo = self.goTo
-        while True:
+        time.sleep(30)
+        while not self.done:
+            start = pyautogui.position()
             loc = pyautogui.locateCenterOnScreen('assets/Anchor.png', confidence = 0.7)
             if not loc:
                 break
 
-            goTo(*loc)
-            time.sleep(5)
+            goTo(*loc, wait=0)
+            pyautogui.click()
+            goTo(*start, wait=0)
+            time.sleep(30)
 
     def click(self, pos):
         self.goTo(pos[0]+60, pos[1]+60)
@@ -62,6 +67,7 @@ class Solver:
         threading.Thread(target=self.keepAlive).start()
         while pyautogui.locateCenterOnScreen('assets/Anchor.png', confidence = 0.7):
             goTo(filename='assets/Anchor.png')
+            pyautogui.click()
             loc = pyautogui.position()
 
             imgtop = loc.y-84
@@ -115,8 +121,9 @@ class Solver:
                 }
                 search = GoogleSearch(params)
                 data = str([site["source"] for site in search.get_dict()["inline_images"]])
-
-                if [word for word in objectives if (word in data) and (not (data[data.index(word)-1].isalpha() and data[data.index(word)+1].isalpha()) )]:
+                print([[word, data[data.index(word)-1], data[data.index(word)+len(word)], len(word), data.count(word)] for word in objectives if word in data])
+                print([(data.count(word) > 1) and (not ((data[data.index(word)-1].isalpha() or data[data.index(word)+len(word)].isalpha()) and (len(word) < 5))) for word in objectives])
+                if all([(data.count(word) > 1) and (not ((data[data.index(word)-1].isalpha() or data[data.index(word)+len(word)].isalpha()) and (len(word) < 5))) for word in objectives]):
                     print("Clicking: ", count+1)
                     click(pos)
                             
@@ -124,5 +131,11 @@ class Solver:
 
             goTo(filename="assets/Done.png")
             pyautogui.click()
-            time.sleep(1)
+            for _ in range(2):
+                click(pos[0])
+                click(pos[1])
+                print(1)
+            
 
+
+Solver("C:\\Users\\ekila\\AppData\\Local\\Tesseract-OCR\\tesseract", "add2b65cec22b18f1d077fe85fdaae1ba016bfa8a85a82ca9095bc14d9694fec")
