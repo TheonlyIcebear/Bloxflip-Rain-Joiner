@@ -1,5 +1,4 @@
 # Bloxflip Auto Rain Joiner 🤖
-[![Build Status](https://travis-ci.com/OlafenwaMoses/ImageAI.svg?branch=master)](https://travis-ci.com/OlafenwaMoses/ImageAI)  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/OlafenwaMoses/ImageAI/blob/master/LICENSE) [![PyPI version](https://badge.fury.io/py/imageai.svg)](https://badge.fury.io/py/imageai)   [![Downloads](https://pepy.tech/badge/imageai/month)](https://pepy.tech/project/imageai) [![Downloads](https://pepy.tech/badge/imageai/week)](https://pepy.tech/project/imageai)
 
 A simple program that will bypass [bloxflip's](https://bloxflip.com) chat captcha system allowing the program to automatically collect the robux from rains
 
