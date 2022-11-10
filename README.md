@@ -1,5 +1,5 @@
 # Bloxflip Auto Rain Joiner 🤖
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)<br>
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)<br>
 A simple program that will bypass [bloxflip's](https://bloxflip.com) chat captcha system allowing the program to automatically collect the robux from rains
 
 # Usage ⚙
