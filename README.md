@@ -5,7 +5,8 @@ A simple program that will bypass [bloxflip's](https://bloxflip.com) chat captch
 # Setup 🌐
 The program uses a library called [tesseract](https://pypi.org/project/pytesseract/) to detect text in images, the package requires you to actually install the program itself
 
-to download it go to [here](https://github.com/UB-Mannheim/tesseract/wiki) and download the 64 bit version, then put the path you downlaoded it into the `tesseract_path` key inside config.json and make sure to add `\\tesseract to the end` and replace all the backslashes with double backslashes
+to download it go to [here](https://github.com/UB-Mannheim/tesseract/wiki) and download the 64 bit version, then put the path you downlaoded it into the `tesseract_path` key inside config.json and make sure to add `\\tesseract` to the end and replace all the backslashes with double backslashes
+
 ![image](https://user-images.githubusercontent.com/78031685/200985867-ee37bf56-c8d3-4160-885d-5cbf90446738.png)
 
 # Usage ⚙
