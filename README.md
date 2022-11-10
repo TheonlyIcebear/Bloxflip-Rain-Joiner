@@ -61,3 +61,10 @@ If you set webhook_enabled to "True" input your webhook into here to it can actu
 Example of webhook:
 
 ![image](https://user-images.githubusercontent.com/79641603/161392598-616dda5d-adb5-4ff4-9b60-d46ea8581128.png)
+
+### tesseract_path
+The program uses a library called [tesseract](https://pypi.org/project/pytesseract/) to detect text in images 
+
+the installation requires you to actually install the program itself
+
+to download it go to [here](https://github.com/UB-Mannheim/tesseract/wiki) and download the 64 bit version
