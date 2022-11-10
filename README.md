@@ -9,12 +9,10 @@ to download it go to [here](https://github.com/UB-Mannheim/tesseract/wiki) and d
 
 ![image](https://user-images.githubusercontent.com/78031685/200985867-ee37bf56-c8d3-4160-885d-5cbf90446738.png) <br>
 
-You also need to create an account at [SerpApi](https://serpapi.com/dashboard) to get a api key for the reverse image search part
+You also need to create an account at [SerpApi](https://serpapi.com/dashboard) to get a api key for the reverse image search part. Your key will be on the dashboard page
 
-After signing up your key should be on the dashboard page
+![image](https://user-images.githubusercontent.com/78031685/200986272-2227615e-df45-4689-b37d-2731130137c7.png) <br>
 **IMPORTANT**: You only get **100** api requests a month, so you can either sign up for a paid plan or simply keep creating new accounts when it runs out
-![image](https://user-images.githubusercontent.com/78031685/200986272-2227615e-df45-4689-b37d-2731130137c7.png)
-
 
 # Usage ⚙
 The config.json file should look like
