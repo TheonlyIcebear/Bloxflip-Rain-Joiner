@@ -1,8 +1,10 @@
 {
-  "minimum_amount": 500,
-  "refresh_rate": 30,
-  "windows_notification": "True",
-  "webhook_enabled": "True",
-  "webhook_ping": "<@&992500243390271518>",
-  "webhook": "https://discord.com/api/webhooks/992690730785046538/XJZeL6JZENqIm_iJUsIn27CDEhGeGnXMpjYFj71IJCGD0PUQc0GjUoxoNpeUEMML7ngS"
+	"minimum_amount": 500,
+	"auto_join": true,
+	"webhook_enabled": true,
+	"webhook": "https://discord.com/api/webhooks/xxxxxxxxxxx/xxxxxxxxxxxxxxxxxxxxx",
+	"webhook_ping": "<@1234567890>",
+	"notifications_enabled": true,
+	"tesseract_path": "C:\\Users\\USER\\AppData\\Local\\Tesseract-OCR\\tesseract",
+	"Serpapi_Api_Key": ""
 }
