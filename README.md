@@ -9,6 +9,8 @@ to download it go to [here](https://github.com/UB-Mannheim/tesseract/wiki) and d
 
 ![image](https://user-images.githubusercontent.com/78031685/200985867-ee37bf56-c8d3-4160-885d-5cbf90446738.png)
 
+You also need to create an account at [SerpApi](https://serpapi.com/dashboard) to get a api key for the reverse image search part
+
 # Usage ⚙
 The config.json file should look like
 ```json
