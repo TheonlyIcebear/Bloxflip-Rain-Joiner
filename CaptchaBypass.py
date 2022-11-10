@@ -136,6 +136,3 @@ class Solver:
                 click(pos[1])
                 print(1)
             
-
-
-Solver("C:\\Users\\ekila\\AppData\\Local\\Tesseract-OCR\\tesseract", "add2b65cec22b18f1d077fe85fdaae1ba016bfa8a85a82ca9095bc14d9694fec")
