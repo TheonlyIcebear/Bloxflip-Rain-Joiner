@@ -87,10 +87,7 @@ class Solver:
             query = pyautogui.screenshot(region=(imgleft,imgtop, width, height))
             query.save("assets/query.png", format='PNG')
             query = Image.open("assets/query.png")
-            tags = [*"NJVR"]
-            
-            objectives = pytesseract.image_to_string(query)[:-1].replace("\n", "").split(" ")[5:]
-            objectives = [word[0] for word in nltk.pos_tag(objectives) if word[1][0] in tags]
+            objective = pytesseract.image_to_string(query)[:-1].replace("\n", " ")
 
 
             imagesPosition = []
@@ -100,7 +97,7 @@ class Solver:
                 imagesPosition.append([left+(row*size)+(divider*row), top+(column*size)+(divider*column)])
             
 
-
+            images = []
             for count, pos in enumerate(imagesPosition):
                 img = pyautogui.screenshot(region=(pos[0],pos[1], 120, 120))
                 img = img.crop()
@@ -113,26 +110,32 @@ class Solver:
                 id = file_link.split("/")[3]
                 page = scraper.get(file_link).text
                 index = page.index(f".anonfiles.com/{id}/")
-                download_link = page[index-15:index+75].replace('"', '')
-                params = {
-                    "engine": "google_reverse_image",
-                    "image_url": download_link,
-                    "api_key": self.key
-                }
-                search = GoogleSearch(params)
-                data = str([site["source"] for site in search.get_dict()["inline_images"]])
-                print([[word, data[data.index(word)-1], data[data.index(word)+len(word)], len(word), data.count(word)] for word in objectives if word in data])
-                print([(data.count(word) > 1) and (not ((data[data.index(word)-1].isalpha() or data[data.index(word)+len(word)].isalpha()) and (len(word) < 5))) for word in objectives])
-                if all([(data.count(word) > 1) and (not ((data[data.index(word)-1].isalpha() or data[data.index(word)+len(word)].isalpha()) and (len(word) < 5))) for word in objectives]):
-                    print("Clicking: ", count+1)
-                    click(pos)
+                download_link = page[index-15:index+75].replace('"', '').replace("\n             ", "")
+                images.append(download_link)
                             
+            data = {
+                'type': 'hcaptcha',
+                'image_urls': images,
+                'task': objective,
+                'key': self.key
+            }
+
+            print(images)
+            res = scraper.post('https://api.nopecha.com/', json=data).json()
+            time.sleep(10)
+            print(res)
+            solution = scraper.get(f"https://api.nopecha.com/?id={res['data']}&key={self.key}").json()['data']
+
+            for count, pos in enumerate(imagesPosition):
+                if solution[count]:
+                    click(pos)
+                    
 
 
             goTo(filename="assets/Done.png")
             pyautogui.click()
             for _ in range(2):
-                click(pos[0])
-                click(pos[1])
+                click(imagesPosition[0])
+                click(imagesPosition[0])
                 print(1)
             
