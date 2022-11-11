@@ -133,12 +133,14 @@ class Solver:
             if not any(solution):
                 goTo(filename="assets/Skip.png")
                 pyautogui.click()
+                time.sleep(2)
+                for _ in range(2):
+                    click(imagesPosition[0])
+                    print(1)
+                continue
 
             goTo(filename="assets/Done.png")
             pyautogui.click()
-            for _ in range(2):
-                click(imagesPosition[0])
-                click(imagesPosition[0])
-                print(1)
-            
+            self.done = True
+
             
