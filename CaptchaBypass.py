@@ -130,7 +130,9 @@ class Solver:
                 if solution[count]:
                     click(pos)
                     
-
+            if not any(solution):
+                goTo(filename="assets/Skip.png")
+                pyautogui.click()
 
             goTo(filename="assets/Done.png")
             pyautogui.click()
@@ -138,4 +140,5 @@ class Solver:
                 click(imagesPosition[0])
                 click(imagesPosition[0])
                 print(1)
+            
             
