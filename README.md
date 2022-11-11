@@ -9,7 +9,7 @@ to download it go to [here](https://github.com/UB-Mannheim/tesseract/wiki) and d
 
 ![image](https://user-images.githubusercontent.com/78031685/200985867-ee37bf56-c8d3-4160-885d-5cbf90446738.png) <br>
 
-You also need to create an account at [NoCaptcha](https://discord.gg/N7Pw37ed) to get a api key for the reverse image search part. Your key will be on the dashboard page
+You also need to get a key from [NoCaptcha](https://discord.gg/N7Pw37ed), to get a api key for the reverse image search part.
 
 ![image](https://user-images.githubusercontent.com/78031685/200986272-2227615e-df45-4689-b37d-2731130137c7.png) <br>
 
