@@ -14,7 +14,7 @@ You also need to create an account at [NoCaptcha](https://discord.gg/N7Pw37ed) t
 ![image](https://user-images.githubusercontent.com/78031685/200986272-2227615e-df45-4689-b37d-2731130137c7.png) <br>
 
 # Warning ⚠
-**IMPORTANT**: You only get **100** api requests a month, so you can either sign up for a paid plan or simply keep creating new accounts when it runs out
+**IMPORTANT**: You only get **100** api requests a day, so you can either sign up for a paid plan or simply keep creating a new key daily
 
 # Usage ⚙
 The config.json file should look like
