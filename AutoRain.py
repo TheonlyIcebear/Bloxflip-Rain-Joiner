@@ -221,7 +221,7 @@ class main:
 				if not start:
 					uiprint("Join rain button not found. Opening bloxflip now...", "warning")
 					subprocess.call("start https://bloxflip.com",shell=True)
-					time.sleep(3)
+					time.sleep(30)
 					start = pyautogui.locateCenterOnScreen('assets/Join.png', confidence = 0.7)
 				if start:
 					pyautogui.moveTo(*start,0.5)
