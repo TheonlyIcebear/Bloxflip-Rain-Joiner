@@ -3,13 +3,7 @@
 A simple program that will bypass [bloxflip's](https://bloxflip.com) chat captcha system allowing the program to automatically collect the robux from rains
 
 # Setup 🌐
-The program uses a library called [tesseract](https://pypi.org/project/pytesseract/) to detect text in images, the package requires you to actually install the program itself
-
-to download it go to [here](https://github.com/UB-Mannheim/tesseract/wiki) and download the 64 bit version, then put the path you downlaoded it into the `tesseract_path` key inside config.json and make sure to add `\\tesseract` to the end and replace all the backslashes with double backslashes
-
-![image](https://user-images.githubusercontent.com/78031685/200985867-ee37bf56-c8d3-4160-885d-5cbf90446738.png) <br>
-
-You also need to get a key from [NoCaptcha](https://discord.gg/N7Pw37ed), to get a api key for the reverse image search part.
+This Program requires the [NopeCHA Addon](https://chrome.google.com/webstore/detail/nopecha-captcha-solver/dknlfmjaanfblgfdfebhijalfmhmjjjo), using the settings as shown
 
 ![image](https://user-images.githubusercontent.com/78031685/200986272-2227615e-df45-4689-b37d-2731130137c7.png) <br>
 

@@ -3,7 +3,6 @@
 import cloudscraper, subprocess, pyautogui, threading, requests, logging, base64, json, time, os
 from discord_webhook import DiscordWebhook, DiscordEmbed
 from win10toast import ToastNotifier
-from CaptchaBypass import Solver
 from termcolor import cprint
 from zipfile import *
 from sys import exit
@@ -121,19 +120,12 @@ class main:
 		with open("config.json", "r+") as data:
 			config = json.load(data)
 
-			try:
-				self.ping = config["webhook_ping"]
-				self.webhook = DiscordWebhook(url=config["webhook"], content=self.ping)
-				self.webhook_enabled = config["webhook_enabled"]
-				self.notifications = config["notifications_enabled"]
-				self.minimum_amount = float(config["minimum_amount"])
-				self.autojoin = config["auto_join"]
-				self.path = config["tesseract_path"]
-				self.key = config["Serpapi_Api_Key"]
-			except KeyError as k:
-				uiprint(f"Invalid {k} key inside JSON file. Please redownload config from Gitub", "error")
-				time.sleep(1.6)
-				exit()
+			self.ping = config["webhook_ping"]
+			self.webhook = DiscordWebhook(url=config["webhook"], content=self.ping)
+			self.webhook_enabled = config["webhook_enabled"]
+			self.notifications = config["notifications_enabled"]
+			self.minimum_amount = float(config["minimum_amount"])
+			self.autojoin = config["auto_join"]
 
 
 		print("[", end="")
@@ -184,8 +176,6 @@ class main:
 		autojoin = self.autojoin
 		webhook = self.webhook
 		uiprint = self.print
-		path = self.path
-		key = self.path
 
 		realclass = None
 		uiprint("Program started. Press Ctrl + C to exit")
@@ -237,7 +227,6 @@ class main:
 					pyautogui.moveTo(*start,0.5)
 					pyautogui.click()
 					pyautogui.moveTo(700,700, 5)
-					Solver(path, key)
 					uiprint("Joined rain successfully!", "good")
 
 				else:
