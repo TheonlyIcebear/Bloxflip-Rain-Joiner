@@ -6,7 +6,8 @@ A simple program that will bypass [bloxflip's](https://bloxflip.com) chat captch
 # Setup 🌐
 
 This Program requires [Python 3.10.5](https://www.python.org/downloads/release/python-3105/) with add to PATH to run without errors.
-This Program requires the [NopeCHA Addon](https://chrome.google.com/webstore/detail/nopecha-captcha-solver/dknlfmjaanfblgfdfebhijalfmhmjjjo), using the settings as shown
+
+It also requires the [NopeCHA Addon](https://chrome.google.com/webstore/detail/nopecha-captcha-solver/dknlfmjaanfblgfdfebhijalfmhmjjjo), using the settings as shown
 
 ![image](https://github.com/Schweinhitti/Bloxflip-Rain-Joiner/blob/c0f51c7c62ed6281a61b059224ddbfb574634580/assets/nopecha.png) <br>
 
