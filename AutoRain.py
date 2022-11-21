@@ -177,7 +177,6 @@ class main:
 		webhook = self.webhook
 		uiprint = self.print
 
-		realclass = None
 		uiprint("Program started. Press Ctrl + C to exit")
 		
 
