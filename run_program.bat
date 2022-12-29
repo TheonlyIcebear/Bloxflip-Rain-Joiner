@@ -1,7 +1,9 @@
 @echo off
+:start
 Title Package Installer
 echo Installer requirements
+python AutoRain.py
 python -m pip install -r requirements.txt --force-reinstall --no-cache
-
-echo "MAKE SURE TO DOWNLOAD TESSERACT FROM https://sourceforge.net/projects/tesseract-ocr.mirror/"
+python AutoRain.py
+goto start
 PAUSE
